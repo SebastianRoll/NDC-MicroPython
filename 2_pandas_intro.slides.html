@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>slides slides</title>
+<title>2_pandas_intro slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11854,76 +11854,16 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-insight-with">Data insight with<a class="anchor-link" href="#Data-insight-with">&#182;</a></h2><p><img src="https
-://pandas.pydata.org/_static/pandas_logo.png" alt="alt text"></p>
-<p><strong>Sebastian Roll</strong>
-<em>sebastian.roll@webstep.no</em></p>
-
+<center>![alt text](https://pandas.pydata.org/_static/pandas_logo.png)</center>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-&lt;a href=&quot;1_introduction.slides&quot;&gt;first intro&lt;/a&gt;
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<a href="1_introduction.slides">first intro</a>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="But-first..">But first..<a class="anchor-link" href="#But-first..">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<center><img src="https://jupyter.org/assets/main-logo.svg" alt="Drawing" style="width: 300px;"/></center>
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Latex">Latex<a class="anchor-link" href="#Latex">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>\( P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)} \)</p>
+<h2 id="What-problem-does-pandas-solve?">What problem does pandas solve?<a class="anchor-link" href="#What-problem-does-pandas-solve?">&#182;</a></h2><blockquote><p>Python has long been great for data munging and preparation, but less so for data analysis and modeling. pandas helps fill this gap, enabling you to carry out your entire data analysis workflow in Python without having to switch to a more domain specific language like R.</p>
+</blockquote>
 
 </div>
 </div>
@@ -11932,101 +11872,13 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="HTML">HTML<a class="anchor-link" href="#HTML">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
-
-&lt;h1&gt;I&#39;m a header&lt;/h1&gt;
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-
-<h1>I'm a header</h1>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Shell-commands">Shell commands<a class="anchor-link" href="#Shell-commands">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls *.csv
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>crypto_holdings.csv
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Other-Jupyter-kernels">Other Jupyter kernels<a class="anchor-link" href="#Other-Jupyter-kernels">&#182;</a></h3><ul>
-<li>Javascript</li>
-<li>nodejs</li>
-<li>Ruby</li>
-<li>Perl</li>
-<li>Fortran</li>
-<li>Go</li>
-<li>Lua</li>
-<li>Scala</li>
-<li>Kotlin</li>
-<li>Matlab</li>
-<li>R</li>
-<li>Brainfuck</li>
+<h2 id="Highlights">Highlights<a class="anchor-link" href="#Highlights">&#182;</a></h2><ul>
+<li>A fast and efficient DataFrame object for data manipulation with <strong>integrated indexing</strong>;</li>
+<li>Tools for reading and writing data between in-memory data structures and different formats: <strong>CSV and text files, Microsoft Excel, SQL databases, and the fast HDF5 format</strong>;</li>
+<li>Intelligent data alignment and integrated handling of <strong>missing data</strong>: gain automatic label-based alignment in computations and easily manipulate messy data into an orderly form;</li>
+<li>Flexible <strong>reshaping and pivoting</strong> of data sets;</li>
+<li>Intelligent label-based slicing, fancy indexing, and subsetting of large data sets;</li>
+<li>Columns can be inserted and deleted from data structures for size mutability;</li>
 </ul>
 
 </div>
@@ -12036,16 +11888,453 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Generate-the-slides-and-serve-them-using-nbconvert:">Generate the slides and serve them using nbconvert:<a class="anchor-link" href="#Generate-the-slides-and-serve-them-using-nbconvert:">&#182;</a></h3>
+<ul>
+<li>Aggregating or transforming data with a powerful group by engine allowing split-apply-combine operations on data sets;</li>
+<li><strong>High performance merging and joining of data sets</strong>;</li>
+<li><strong>Hierarchical axis indexing</strong> provides an intuitive way of working with high-dimensional data in a lower-dimensional data structure;</li>
+<li><strong>Time series-functionality</strong>: date range generation and frequency conversion, moving window statistics, moving window linear regressions, date shifting and lagging. Even create domain-specific time offsets and join time series without losing data;</li>
+<li>Highly optimized for performance, with critical code paths written in Cython or C.</li>
+<li>Python with pandas is in use in a wide variety of academic and commercial domains, including Finance, Neuroscience, Economics, Statistics, Advertising, Web Analytics, and more.</li>
+</ul>
+<p><a href="https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf">Cheat Sheet</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Installing-pandas">Installing pandas<a class="anchor-link" href="#Installing-pandas">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" alt="Drawing" style="width: 300px;"/></p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>&gt; jupyter notebook</code></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-pandas">Using pandas<a class="anchor-link" href="#Using-pandas">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to slides 1_introduction.ipynb --post serve
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series">Series<a class="anchor-link" href="#Series">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Series</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>a    1
+b    2
+c    3
+s    4
+Name: name, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DataFrame">DataFrame<a class="anchor-link" href="#DataFrame">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DataFrame</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bala&#39;</span><span class="p">,</span> <span class="s1">&#39;balb&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bala</th>
+      <th>balb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<span class="c1"># Add columns, index</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Christmas-Beer">Christmas Beer<a class="anchor-link" href="#Christmas-Beer">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls *.xlsx
 </pre></div>
 
 </div>
@@ -12062,123 +12351,8 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] WARNING | pattern &#39;main.ipynb&#39; matched no files
-This application is used to convert notebook files (*.ipynb) to various other
-formats.
-
-WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-
-Options
--------
-
-Arguments that take values are actually convenience aliases to full
-Configurables, whose aliases are listed on the help line. For more information
-on full configurables, see &#39;--help-all&#39;.
-
---debug
-    set log level to logging.DEBUG (maximize logging output)
---generate-config
-    generate default config file
--y
-    Answer yes to any questions instead of prompting.
---execute
-    Execute the notebook prior to export.
---allow-errors
-    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if &#39;--execute&#39; was specified, too.
---stdin
-    read a single notebook file from stdin. Write the resulting notebook with default basename &#39;notebook.*&#39;
---stdout
-    Write notebook output to stdout instead of files.
---inplace
-    Run nbconvert in place, overwriting the existing notebook (only 
-    relevant when converting to notebook format)
---no-prompt
-    Exclude input and output prompts from converted document.
---log-level=&lt;Enum&gt; (Application.log_level)
-    Default: 30
-    Choices: (0, 10, 20, 30, 40, 50, &#39;DEBUG&#39;, &#39;INFO&#39;, &#39;WARN&#39;, &#39;ERROR&#39;, &#39;CRITICAL&#39;)
-    Set the log level by value or name.
---config=&lt;Unicode&gt; (JupyterApp.config_file)
-    Default: &#39;&#39;
-    Full path of a config file.
---to=&lt;Unicode&gt; (NbConvertApp.export_format)
-    Default: &#39;html&#39;
-    The export format to be used, either one of the built-in formats, or a
-    dotted object name that represents the import path for an `Exporter` class
---template=&lt;Unicode&gt; (TemplateExporter.template_file)
-    Default: &#39;&#39;
-    Name of the template file to use
---writer=&lt;DottedObjectName&gt; (NbConvertApp.writer_class)
-    Default: &#39;FilesWriter&#39;
-    Writer class used to write the  results of the conversion
---post=&lt;DottedOrNone&gt; (NbConvertApp.postprocessor_class)
-    Default: &#39;&#39;
-    PostProcessor class used to write the results of the conversion
---output=&lt;Unicode&gt; (NbConvertApp.output_base)
-    Default: &#39;&#39;
-    overwrite base name use for output files. can only be used when converting
-    one notebook at a time.
---output-dir=&lt;Unicode&gt; (FilesWriter.build_directory)
-    Default: &#39;&#39;
-    Directory to write output(s) to. Defaults to output to the directory of each
-    notebook. To recover previous default behaviour (outputting to the current
-    working directory) use . as the flag value.
---reveal-prefix=&lt;Unicode&gt; (SlidesExporter.reveal_url_prefix)
-    Default: &#39;&#39;
-    The URL prefix for reveal.js. This can be a a relative URL for a local copy
-    of reveal.js, or point to a CDN.
-    For speaker notes to work, a local reveal.js prefix must be used.
---nbformat=&lt;Enum&gt; (NotebookExporter.nbformat_version)
-    Default: 4
-    Choices: [1, 2, 3, 4]
-    The nbformat version to write. Use this to downgrade notebooks.
-
-To see all available configurables, use `--help-all`
-
-Examples
---------
-
-    The simplest way to use nbconvert is
-    
-    &gt; jupyter nbconvert mynotebook.ipynb
-    
-    which will convert mynotebook.ipynb to the default format (probably HTML).
-    
-    You can specify the export format with `--to`.
-    Options include [&#39;asciidoc&#39;, &#39;custom&#39;, &#39;html&#39;, &#39;latex&#39;, &#39;markdown&#39;, &#39;notebook&#39;, &#39;pdf&#39;, &#39;python&#39;, &#39;rst&#39;, &#39;script&#39;, &#39;slides&#39;]
-    
-    &gt; jupyter nbconvert --to latex mynotebook.ipynb
-    
-    Both HTML and LaTeX support multiple output templates. LaTeX includes
-    &#39;base&#39;, &#39;article&#39; and &#39;report&#39;.  HTML includes &#39;basic&#39; and &#39;full&#39;. You
-    can specify the flavor of the format used.
-    
-    &gt; jupyter nbconvert --to html --template basic mynotebook.ipynb
-    
-    You can also pipe the output to stdout, rather than a file
-    
-    &gt; jupyter nbconvert mynotebook.ipynb --stdout
-    
-    PDF is generated via latex
-    
-    &gt; jupyter nbconvert mynotebook.ipynb --to pdf
-    
-    You can get (and serve) a Reveal.js-powered slideshow
-    
-    &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
-    
-    Multiple notebooks can be given at the command line in a couple of 
-    different ways:
-    
-    &gt; jupyter nbconvert notebook*.ipynb
-    &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
-    
-    or you can specify the notebooks list in a config file, containing::
-    
-        c.NbConvertApp.notebooks = [&#34;my_notebook.ipynb&#34;]
-    
-    &gt; jupyter nbconvert --config mycfg.py
-
+<pre>beer tasting_complex.xlsx  disruptive_technologies.xlsx  dt_sensors.xlsx
+beer tasting.xlsx	   dt_fridge_sensor_backup.xlsx  dt_sensor_window.xlsx
 </pre>
 </div>
 </div>
@@ -12189,17 +12363,772 @@ Examples
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beerpath</span> <span class="o">=</span> <span class="s1">&#39;beer tasting.xlsx&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">beerpath</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></section></section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Gaute</th>
+      <th>Joakim</th>
+      <th>Jonas</th>
+      <th>Marius</th>
+      <th>Magne-T</th>
+      <th>Ole-J</th>
+      <th>Sebastian</th>
+      <th>Terje</th>
+      <th>Thomas</th>
+      <th>Tor-Arne</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>4</td>
+      <td>3</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>6</td>
+      <td>4</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+      <td>4</td>
+      <td>4</td>
+      <td>2</td>
+      <td>5</td>
+      <td>2</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1</td>
+      <td>5</td>
+      <td>4</td>
+      <td>4</td>
+      <td>2</td>
+      <td>5</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>6</td>
+      <td>5</td>
+      <td>5</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># columns, index, dtypes</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    int64
+2    int64
+3    int64
+4    int64
+5    int64
+6    int64
+7    int64
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># transpose</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># loc, iloc, at</span>
+<span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="s1">&#39;Gaute&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># describe</span>
+<span class="c1"># mean()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Gaute&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1    4
+2    1
+3    1
+4    1
+5    1
+6    1
+7    1
+Name: Gaute, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drop Gaute</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Gaute&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot (bar, pie)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">));</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+4aqq5RzvfFb799i/TGttT5JV/x2/U9hnk5xdVae11v41yb9J8rFjuYOqmmit3ZxkxQKwSMe9Lsup
+tfaoJKmqc5P8amvtR1d6meNO4tVJ/ry1dl5Vrc/wRZ3fTfL/Vnr5x6KqvjPJjyb5ttba56vqjCRL
+3lEu0r2T/HKSFybJCfK8TWttf5JzkqSqnpXkM6215y52/qpa31r7+RUa3qLMtw5VtS3Jmry5Xg7H
+s23G12O11mYOm74+yXlJbk7y8CRvP8K8E621Q8c3+i9Z0qn4Gjynqq6rqmur6qfH6adX1Vuq6qpx
++nlHmHd7Vb23qr597lFFVT2rql5WVW+vqn1V9RNV9ezxft5UVRuOb1WX5ijreu54VPHKqnp/Ve2e
+fTdWVc+sqveM81w0Z/oTq+qG8Yjlf6/F+iR5Y5IfGS8/JsnLZ6+oqodW1d+P2+eds0cEVfW4qnp9
+Vf1dkrfUnDMw43XPn3Mfbxgfm/U1HAHOPm5POUHW5W5V9YpxO7ymqt5V45FhVX2mqn63qt5XVVNV
+dd9x+paqetW4Td9TVQ9bgXVZiu9Nckdr7SVJ0lr7QpKnJPmFJHebvVFV3b2qLqmqd4+Px1e8LlfB
+/ZLc1lr7/DjW21prN1fVjqp6a1VNV9Wbq+p+c+a5oIYjpeuq6qHjusy3Xb95XL+rx9fXA5P8QZKv
+H6c957Dn7bZxX3PV+O+7xunzvq5XQ1U9ds56vLCq1tVwNupfqupPquqaJA+tqiurajZAPzw+JldV
+1V9X1d1Xa7zzWF9VL6rh7MylVXXaOM5zxtfVNeNrb9M4/Yqq+uOq2lNVN9bQhlfXcBbqd2bvtKpe
+Oz5Prq+qC8dpq7GfmV3+08blXFdVTxinfcO4L9md5PoMz/PDfV+S92Z40/2YOff3O1X1F1X1jiQv
+rapd4/PuzeO6//6c2x7bNm6tHdO/JJ9J8pNJLkuyPsl9k3x4XKGJJPccb3dGkpuSVJJtSa5L8qBx
+BR883ubcJG8YLz8ryZVJNiR5cJLPJfnh8brXJPl3xzrW4/23wLqem+RTSR6Q4Q3S3yd5+Djffebc
+x/9K8mPj5ZuT3GW8fO81Wp9vTfLKJHdNcvVh2+CeSSbGy9+f5FXj5ccl+ejses1uzznXPX/OMt4w
+3ueOJJfNmb6s63sc6/KrSf7nePnsJIeS7Bx/bnO21bOT/MZ4+a/mbNuvTXLjUcb1xTGswvZ8YpI/
+PsL0947XzT4Wv5fkZ2e3Q5J/SHL3I8z30iQ/tUJjPX3cRv+Q4Qj6ERle6+9MsmW8zU8nuWS8fEWS
+F42Xv2fO822+7fpnSc4fL29Mctrc5+kRnrd3S3LX8fIDk+yZs/2O+LpeocflWRnO8Mw+H187Z/0u
+SvIzGfarLclPzJnvygxHll+V5K1J7jZOf0aSp6/G82+eddg2vqbOGX9+xZzn3jVJHjFe/m9J/mTO
+tv7D8fKTMuwn75fkLhn2O5vH62b3P6dl6MnmrOB+5rD1+o4k7xuXfY8kNyb5liTfkGQm4z5knvt5
+SYagbxrXZ3b7/k6Sd895Hu5K8sHxOX5ako8k+ZqlbOOlnop/eJKXt+EI4RNV9dYk357kb5L8XlV9
+z7iy988QwyTZkuR1GZ6c830G8zettTur6toMIX3TOP3aDE+YtTDfun46ybtbax9Nkqq6ehzjlUke
+WVVPy7DzuE+Gd3L/N8MTe3dVvTbDC3jVtdauqeF02WMyHPHOda8kLxuPdlqGHe+sy1pr/3wMi9qb
+ZHtV/VmG08KXLnnQ81jiujw8yZ+O8183HgHNOpgvnUacznB6PxkCctacA7d7VtXprbWT5TsYP5Dk
+x6vqV8ef75rxDcpqDaC19pmq2pHku5M8MslfZ9ixnZ3ksvGxXZ/kljmzvXyc921Vdc+quneGneqR
+tuvfJ3lGVT0gyatbax9c4EB7Q5Lnj0e9X0jyjXOum+91vdK+P8O+Zc849tmdezI8N19zhHm+K8lZ
+Sd45zrMxqzPWo/mn1trV4+XpJNuq6l4ZovvWcfrLkvyfOfO8fvzvtUmub63dkiRVtTfJmUn2J3li
+VT1qvN2ZGd6QfSArvJ8ZPTzDm8h/Hcf12gzP5UuT/GMbPlb+ClV1lyQ/mOQ/tdY+W1VXZdjOs217
+XWvtjjmz/G1r7dPjvO/P8Dr96hzjNl7uz9jPzxDwHWOgP5RhJ5IM74I/nOEBmi/ss6fpZqrqzja+
+PcnwJmFNvw8wj8/PufyFJBNVddcMRyQ7W2sfqeFzmtnH4EcyHH38WIad0Le0Zfxc5Ri8PslzMxyd
+bJ4z/beTXN5ae9QYzCvmXPfZee7rUL78I527Jklr7UBVPTjDk/rxSR6d4RTxclvKusxn7nPuC/nS
+c25dksnDXoCpqjdneOO6p7W2a4njPx435LDPjKvqnhl2BjdlCHoynDX7ydbaBw677UuSPCTJza21
+f7vSgx3fHF+R5IrxzfuvZNiJf+d8sxzh5yNu19baX1XVuzK8xt5YVf8xw5vL+TwlyScynB1cl2Tu
+tv2K1/VC67ZMKsMZi//6ZROrJpL865zn5uHzvKm1dsFqDHCRDn/8TjuGeWYOm38mw3713AxB/M7W
+2ueq6ooMR7qrtZ85mi/uG2v48ulvjD8+LsnXZTjIuH6M8t2THMiXwn74fvVIz71j3sZL/XW3tyf5
+6fHzjS0ZYvXuDCvwyTHqj0yydc48B5M8KsnPVdXPLHG5a2G+dZ3PbMRvq6rTM+54q2pdkjNba5cn
++bUMj9XpKzfso7okyW+11q49bPq98qUvoD1ukff1oSTnjJ8Fnplk9rPQM5Ksa629KsMT/duOd9Dz
+ONZ1eUeGF3+q6qwMp9MWcmmSJ8z+MPvZZmvtB1tr56xR1JPkLUnuVlU/N45rfZL/nuGU+ufm3O7N
+SZ5Q9cXvejwkSVprPz+Of8WjXlUPGo+yZ52T4YzBlhq+WJeq2lBV3zznNrPfZ3l4kk+11j6VebZr
+VW1Psre19rwMZwa/NcntGY7wj+ReSW5pwxedLshwtmCt/W2SR4+vndlvaH/tAvO8M8kjxvWf/T7F
+AxeYZ9WN2+5AVX33OOmCDKeXF+teSQ6MUf+mJJPJqu5n3p7kUVV12rhfPy9H+BJca+2V42vqnPGs
+xWOSPK61tq21ti3J9iQ/PB4ALtYxb+NjCvv4zvHzGU4JXZPhM4e/S/K01trHk+xOsnN8N/5zSd4/
+d/7W2mczfDP2KVX148ey7NW2iHU9otbavyR5UYbPgN6c5D3jVeuT/OX42Lw3yfPG26661tpHxx3g
+4Z6d5Per6r1Z/FHKO5L8U4ajx+cluWqcfv8MR2ZXJ/nLJL9+fKM+siWsywszxOSGDKeCr89wNulo
+npjheX3NON/jl2Hox208gntUkn9fVR/M8Pn1HUmefthNfzvDqedrqur68ecjmX3Or4TTM5xCv2H8
++OOsJM/M8Mb3D6vqfRk+g5/764F3jNvvfyT5xXHafNv10UmuG59vZyf5izZ8w/kdNXzZ6TmHjeeF
+SR47LvebMv8ZqVUzvjn9rSR/Oz5Gl+ZLH2XOM0v7RIbH5q/HdXlnvvxjhRPJY5M8Z1y3czJ8zr5Y
+b8pw5H5jhi9FTo3TV2s/8+4MHw29Z1z2nx/hYOLLjG8Avj/DR9Sz93P7OP+PzDffEZZ9zNv4mP6k
+7HjK40WttYcueqaT1Km0rqeS8ah2Q2vtjqr6+gxHSQ9qrR1c46GtqfGM0nuSXHCU78BwghgD9wOt
+tY8seGNOOYv+7KiqHp/hyOXJKzecE8OptK6noLslubyGX5+sJL8s6vU1Gd7gXC7qJ74afu30PaLO
+fPxPYACgI/5WPAB0RNgBoCPCDgAdEXYA6IiwA0BH/j+lSVOmpFPJggAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Who-has-the-most-refined-taste?-(highest-spread)">Who has the most refined taste? (highest spread)<a class="anchor-link" href="#Who-has-the-most-refined-taste?-(highest-spread)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[64]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Joakim&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>hint: std, max(), argmax()</p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[66]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3    4
+2    4
+4    1
+Name: 1, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Apply">Apply<a class="anchor-link" href="#Apply">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Joakim       1
+Jonas        3
+Marius       2
+Magne-T      2
+Ole-J        2
+Sebastian    3
+Terje        1
+Thomas       1
+Tor-Arne     0
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Burn-the-witch!">Burn the witch!<a class="anchor-link" href="#Burn-the-witch!">&#182;</a></h3><p>Who deviates the most from the group?</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">df</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Terje&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[68]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Joakim</th>
+      <td>0</td>
+      <td>-2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Jonas</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Marius</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Magne-T</th>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>-2</td>
+    </tr>
+    <tr>
+      <th>Ole-J</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Sebastian</th>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>2</td>
+      <td>3</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>Terje</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Thomas</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Tor-Arne</th>
+      <td>1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">df</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section>
 </div>
 </div>
 
