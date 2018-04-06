@@ -11901,138 +11901,6 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">SysCallError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ansi-cyan-fg">wrap_socket</span><span class="ansi-blue-fg">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname)</span>
-<span class="ansi-green-intense-fg ansi-bold">    437</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 438</span><span class="ansi-red-fg">                 </span>cnx<span class="ansi-blue-fg">.</span>do_handshake<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    439</span>             <span class="ansi-green-fg">except</span> OpenSSL<span class="ansi-blue-fg">.</span>SSL<span class="ansi-blue-fg">.</span>WantReadError<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/OpenSSL/SSL.py</span> in <span class="ansi-cyan-fg">do_handshake</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1425</span>         result <span class="ansi-blue-fg">=</span> _lib<span class="ansi-blue-fg">.</span>SSL_do_handshake<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_ssl<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1426</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_raise_ssl_error<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_ssl<span class="ansi-blue-fg">,</span> result<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1427</span> 
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/OpenSSL/SSL.py</span> in <span class="ansi-cyan-fg">_raise_ssl_error</span><span class="ansi-blue-fg">(self, ssl, result)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1166</span>                         <span class="ansi-green-fg">raise</span> SysCallError<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">,</span> errorcode<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>errno<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1167</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> SysCallError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Unexpected EOF&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1168</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">SysCallError</span>: (-1, &#39;Unexpected EOF&#39;)
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">SSLError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    599</span>                                                   body<span class="ansi-blue-fg">=</span>body<span class="ansi-blue-fg">,</span> headers<span class="ansi-blue-fg">=</span>headers<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 600</span><span class="ansi-red-fg">                                                   chunked=chunked)
-</span><span class="ansi-green-intense-fg ansi-bold">    601</span> 
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ansi-cyan-fg">_make_request</span><span class="ansi-blue-fg">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    344</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 345</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_validate_conn<span class="ansi-blue-fg">(</span>conn<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    346</span>         <span class="ansi-green-fg">except</span> <span class="ansi-blue-fg">(</span>SocketTimeout<span class="ansi-blue-fg">,</span> BaseSSLError<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ansi-cyan-fg">_validate_conn</span><span class="ansi-blue-fg">(self, conn)</span>
-<span class="ansi-green-intense-fg ansi-bold">    843</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> getattr<span class="ansi-blue-fg">(</span>conn<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;sock&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>  <span class="ansi-red-fg"># AppEngine might not have  `.sock`</span>
-<span class="ansi-green-fg">--&gt; 844</span><span class="ansi-red-fg">             </span>conn<span class="ansi-blue-fg">.</span>connect<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    845</span> 
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/connection.py</span> in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    325</span>             server_hostname<span class="ansi-blue-fg">=</span>hostname<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 326</span><span class="ansi-red-fg">             ssl_context=context)
-</span><span class="ansi-green-intense-fg ansi-bold">    327</span> 
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/util/ssl_.py</span> in <span class="ansi-cyan-fg">ssl_wrap_socket</span><span class="ansi-blue-fg">(sock, keyfile, certfile, cert_reqs, ca_certs, server_hostname, ssl_version, ciphers, ssl_context, ca_cert_dir)</span>
-<span class="ansi-green-intense-fg ansi-bold">    324</span>     <span class="ansi-green-fg">if</span> HAS_SNI<span class="ansi-blue-fg">:</span>  <span class="ansi-red-fg"># Platform-specific: OpenSSL with enabled SNI</span>
-<span class="ansi-green-fg">--&gt; 325</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> context<span class="ansi-blue-fg">.</span>wrap_socket<span class="ansi-blue-fg">(</span>sock<span class="ansi-blue-fg">,</span> server_hostname<span class="ansi-blue-fg">=</span>server_hostname<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    326</span> 
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py</span> in <span class="ansi-cyan-fg">wrap_socket</span><span class="ansi-blue-fg">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname)</span>
-<span class="ansi-green-intense-fg ansi-bold">    444</span>             <span class="ansi-green-fg">except</span> OpenSSL<span class="ansi-blue-fg">.</span>SSL<span class="ansi-blue-fg">.</span>Error <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 445</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> ssl<span class="ansi-blue-fg">.</span>SSLError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;bad handshake: %r&#39;</span> <span class="ansi-blue-fg">%</span> e<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    446</span>             <span class="ansi-green-fg">break</span>
-
-<span class="ansi-red-fg">SSLError</span>: (&#34;bad handshake: SysCallError(-1, &#39;Unexpected EOF&#39;)&#34;,)
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">SSLError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">/home/sebastian/.local/lib/python3.6/site-packages/requests/adapters.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-fg">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="ansi-green-intense-fg ansi-bold">    439</span>                     retries<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>max_retries<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 440</span><span class="ansi-red-fg">                     </span>timeout<span class="ansi-blue-fg">=</span>timeout
-<span class="ansi-green-intense-fg ansi-bold">    441</span>                 )
-
-<span class="ansi-green-fg">/home/sebastian/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    629</span>             clean_exit <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span>
-<span class="ansi-green-fg">--&gt; 630</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> SSLError<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    631</span> 
-
-<span class="ansi-red-fg">SSLError</span>: (&#34;bad handshake: SysCallError(-1, &#39;Unexpected EOF&#39;)&#34;,)
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">SSLError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-a00230574ef0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> url <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;https://api.disruptive-technologies.com/v1/things&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span> headers <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#39;Authorization&#39;</span><span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">&#39;ApiKey {api_key}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>api_key<span class="ansi-blue-fg">=</span>api_key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">}</span>
-<span class="ansi-green-fg">---&gt; 13</span><span class="ansi-red-fg"> </span>jsonData <span class="ansi-blue-fg">=</span> requests<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> headers<span class="ansi-blue-fg">=</span>headers<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>json<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     14</span> normalized <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>io<span class="ansi-blue-fg">.</span>json<span class="ansi-blue-fg">.</span>json_normalize<span class="ansi-blue-fg">(</span>jsonData<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;things&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     15</span> df <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">.</span>from_dict<span class="ansi-blue-fg">(</span>normalized<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/home/sebastian/.local/lib/python3.6/site-packages/requests/api.py</span> in <span class="ansi-cyan-fg">get</span><span class="ansi-blue-fg">(url, params, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     70</span> 
-<span class="ansi-green-intense-fg ansi-bold">     71</span>     kwargs<span class="ansi-blue-fg">.</span>setdefault<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;allow_redirects&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 72</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> request<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;get&#39;</span><span class="ansi-blue-fg">,</span> url<span class="ansi-blue-fg">,</span> params<span class="ansi-blue-fg">=</span>params<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     73</span> 
-<span class="ansi-green-intense-fg ansi-bold">     74</span> 
-
-<span class="ansi-green-fg">/home/sebastian/.local/lib/python3.6/site-packages/requests/api.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-fg">(method, url, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     56</span>     <span class="ansi-red-fg"># cases, and look like a memory leak in others.</span>
-<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">with</span> sessions<span class="ansi-blue-fg">.</span>Session<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> session<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> session<span class="ansi-blue-fg">.</span>request<span class="ansi-blue-fg">(</span>method<span class="ansi-blue-fg">=</span>method<span class="ansi-blue-fg">,</span> url<span class="ansi-blue-fg">=</span>url<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     59</span> 
-<span class="ansi-green-intense-fg ansi-bold">     60</span> 
-
-<span class="ansi-green-fg">/home/sebastian/.local/lib/python3.6/site-packages/requests/sessions.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-fg">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="ansi-green-intense-fg ansi-bold">    506</span>         }
-<span class="ansi-green-intense-fg ansi-bold">    507</span>         send_kwargs<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>settings<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 508</span><span class="ansi-red-fg">         </span>resp <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>send<span class="ansi-blue-fg">(</span>prep<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>send_kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    509</span> 
-<span class="ansi-green-intense-fg ansi-bold">    510</span>         <span class="ansi-green-fg">return</span> resp
-
-<span class="ansi-green-fg">/home/sebastian/.local/lib/python3.6/site-packages/requests/sessions.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-fg">(self, request, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    616</span> 
-<span class="ansi-green-intense-fg ansi-bold">    617</span>         <span class="ansi-red-fg"># Send the request</span>
-<span class="ansi-green-fg">--&gt; 618</span><span class="ansi-red-fg">         </span>r <span class="ansi-blue-fg">=</span> adapter<span class="ansi-blue-fg">.</span>send<span class="ansi-blue-fg">(</span>request<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    619</span> 
-<span class="ansi-green-intense-fg ansi-bold">    620</span>         <span class="ansi-red-fg"># Total elapsed time of the request (approximately)</span>
-
-<span class="ansi-green-fg">/home/sebastian/.local/lib/python3.6/site-packages/requests/adapters.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-fg">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="ansi-green-intense-fg ansi-bold">    517</span>             <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> _SSLError<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    518</span>                 <span class="ansi-red-fg"># This branch is for urllib3 versions earlier than v1.22</span>
-<span class="ansi-green-fg">--&gt; 519</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> SSLError<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> request<span class="ansi-blue-fg">=</span>request<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    520</span>             <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> ReadTimeoutError<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    521</span>                 <span class="ansi-green-fg">raise</span> ReadTimeout<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> request<span class="ansi-blue-fg">=</span>request<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">SSLError</span>: (&#34;bad handshake: SysCallError(-1, &#39;Unexpected EOF&#39;)&#34;,)</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12044,7 +11912,7 @@ During handling of the above exception, another exception occurred:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">thing_id</span> <span class="o">=</span> <span class="s2">&quot;206853764&quot;</span>
@@ -12068,1042 +11936,10 @@ During handling of the above exception, another exception occurred:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>battery_percentage</th>
-      <th>battery_voltage</th>
-      <th>device_id</th>
-      <th>event_type</th>
-      <th>last_pressed</th>
-      <th>object_present</th>
-      <th>rssi</th>
-      <th>rssi_strength</th>
-      <th>temperature</th>
-      <th>thing_id</th>
-      <th>thing_type_id</th>
-      <th>time</th>
-      <th>touch</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>970</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>971</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>972</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>973</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>974</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>975</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>976</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>977</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>978</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>979</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>980</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>981</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>982</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>983</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>984</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>985</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>986</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>987</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>988</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>989</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>990</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>991</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>992</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>993</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>994</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>995</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>996</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>997</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>998</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>999</th>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-  </tbody>
-</table>
-<p>1000 rows × 13 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
@@ -13113,30 +11949,10 @@ During handling of the above exception, another exception occurred:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">normalized</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">jsonData</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">])</span>
@@ -13155,208 +11971,26 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
 
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>battery_percentage</th>
-      <th>battery_voltage</th>
-      <th>device_id</th>
-      <th>event_type</th>
-      <th>last_pressed</th>
-      <th>object_present</th>
-      <th>rssi</th>
-      <th>rssi_strength</th>
-      <th>temperature</th>
-      <th>thing_id</th>
-      <th>thing_type_id</th>
-      <th>time</th>
-      <th>touch</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:07:59.607249178Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:24:53.86728333Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:41:47.767251378Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:58:41.757306006Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T01:15:35.487443079Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T01:32:29.187260921Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T01:49:22.537261316Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>28</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T02:06:15.787123447Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T02:23:09.277548535Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T02:40:02.747123402Z</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>battery_percentage    True
+battery_voltage       True
+device_id             True
+event_type            True
+last_pressed          True
+object_present        True
+rssi                  True
+rssi_strength         True
+temperature           True
+thing_id              True
+thing_type_id         True
+time                  True
+touch                 True
+dtype: bool</pre>
 </div>
 
 </div>
@@ -13367,7 +12001,7 @@ During handling of the above exception, another exception occurred:
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">jsonData</span>
@@ -13383,7 +12017,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[45]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -26412,7 +25046,7 @@ During handling of the above exception, another exception occurred:
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -26428,7 +25062,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -26462,31 +25096,13 @@ During handling of the above exception, another exception occurred:
       <th>temperature</th>
       <th>thing_id</th>
       <th>thing_type_id</th>
-      <th>touch</th>
-      <th>present</th>
-      <th>hour_in_day</th>
-    </tr>
-    <tr>
       <th>time</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>touch</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2017-11-01 00:07:59.607249178</th>
+      <th>0</th>
       <td>100</td>
       <td>2.82</td>
       <td>206853764</td>
@@ -26498,12 +25114,11 @@ During handling of the above exception, another exception occurred:
       <td>24</td>
       <td>206853764</td>
       <td>proximity</td>
+      <td>2017-11-01T00:07:59.607249178Z</td>
       <td>False</td>
-      <td>True</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>2017-11-01 00:24:53.867283330</th>
+      <th>1</th>
       <td>100</td>
       <td>2.82</td>
       <td>206853764</td>
@@ -26515,12 +25130,11 @@ During handling of the above exception, another exception occurred:
       <td>24</td>
       <td>206853764</td>
       <td>proximity</td>
+      <td>2017-11-01T00:24:53.86728333Z</td>
       <td>False</td>
-      <td>True</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>2017-11-01 00:41:47.767251378</th>
+      <th>2</th>
       <td>100</td>
       <td>2.82</td>
       <td>206853764</td>
@@ -26532,12 +25146,11 @@ During handling of the above exception, another exception occurred:
       <td>24</td>
       <td>206853764</td>
       <td>proximity</td>
+      <td>2017-11-01T00:41:47.767251378Z</td>
       <td>False</td>
-      <td>True</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>2017-11-01 00:58:41.757306006</th>
+      <th>3</th>
       <td>100</td>
       <td>2.82</td>
       <td>206853764</td>
@@ -26549,12 +25162,11 @@ During handling of the above exception, another exception occurred:
       <td>24</td>
       <td>206853764</td>
       <td>proximity</td>
+      <td>2017-11-01T00:58:41.757306006Z</td>
       <td>False</td>
-      <td>True</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>2017-11-01 01:15:35.487443079</th>
+      <th>4</th>
       <td>100</td>
       <td>2.82</td>
       <td>206853764</td>
@@ -26566,9 +25178,8 @@ During handling of the above exception, another exception occurred:
       <td>24</td>
       <td>206853764</td>
       <td>proximity</td>
+      <td>2017-11-01T01:15:35.487443079Z</td>
       <td>False</td>
-      <td>True</td>
-      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -26591,7 +25202,7 @@ During handling of the above exception, another exception occurred:
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -26607,7 +25218,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -26621,13 +25232,27 @@ During handling of the above exception, another exception occurred:
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_trig</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;object_trigger&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;object_trigger&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -26637,10 +25262,10 @@ During handling of the above exception, another exception occurred:
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_trig</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;object_present&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;object_present&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -26653,7 +25278,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[36]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -26676,69 +25301,21 @@ During handling of the above exception, another exception occurred:
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>battery_percentage</th>
-      <th>battery_voltage</th>
-      <th>device_id</th>
-      <th>event_type</th>
-      <th>last_pressed</th>
-      <th>rssi</th>
-      <th>rssi_strength</th>
-      <th>temperature</th>
-      <th>thing_id</th>
-      <th>thing_type_id</th>
       <th>touch</th>
-      <th>present</th>
-      <th>hour_in_day</th>
     </tr>
     <tr>
       <th>object_present</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>False</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>object_trigger</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>-88</td>
-      <td>4</td>
-      <td>28</td>
-      <td>206853764</td>
-      <td>proximity</td>
       <td>False</td>
-      <td>False</td>
-      <td>18</td>
     </tr>
     <tr>
       <th>True</th>
-      <td>100</td>
-      <td>2.87</td>
-      <td>206853764</td>
-      <td>object_trigger</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>-91</td>
-      <td>4</td>
-      <td>28</td>
-      <td>206853764</td>
-      <td>proximity</td>
       <td>False</td>
-      <td>True</td>
-      <td>18</td>
     </tr>
   </tbody>
 </table>
@@ -26750,21 +25327,7 @@ During handling of the above exception, another exception occurred:
 </div>
 </div>
 
-</div></div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -26772,10 +25335,55 @@ During handling of the above exception, another exception occurred:
 <h3 id="Calculate-duration-(time-open-and-time-closed)">Calculate duration (time open and time closed)<a class="anchor-link" href="#Calculate-duration-(time-open-and-time-closed)">&#182;</a></h3>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;object_trigger&#39;</span><span class="p">]</span>
+<span class="n">trigs</span><span class="o">.</span><span class="n">object_present</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>time
+2017-11-01 09:30:13.587183270    False
+2017-11-01 09:30:19.207188223     True
+2017-11-01 13:52:23.417125856    False
+2017-11-01 13:52:28.037115089     True
+2017-11-01 13:52:32.137125622    False
+2017-11-01 13:52:41.807294763     True
+2017-11-01 13:56:16.877206351    False
+2017-11-01 13:56:21.727175848     True
+2017-11-02 11:47:59.497337261    False
+2017-11-02 11:48:03.566975147     True
+Name: object_present, dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trigs</span><span class="o">.</span><span class="n">index</span>
@@ -26812,19 +25420,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[159]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f29db011748&gt;</pre>
-</div>
-
 </div>
 
 <div class="output_area">
@@ -27074,7 +25669,7 @@ bowxRcYKuzHGFJn/DyRyB+AAfziKAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">open_seconds</span> <span class="o">=</span> <span class="n">trigs</span><span class="p">[</span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;object_present&#39;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">duration</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
@@ -27091,13 +25686,13 @@ bowxRcYKuzHGFJn/DyRyB+AAfziKAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[162]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f29daf97a90&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd2a42973c8&gt;</pre>
 </div>
 
 </div>
@@ -27385,10 +25980,10 @@ jArGjIBhGEYFY0bAMAyjgjEjYBiGUcGYETAMw6hgzAgYhmFUMGYEDMMwKhgzAoZhGBXM/w/IqZ/3
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;object_trigger&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#trigs = df[df[&#39;event_type&#39;] == &#39;object_trigger&#39;]</span>
 <span class="n">trigs</span><span class="o">.</span><span class="n">object_present</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
@@ -27402,7 +25997,7 @@ jArGjIBhGEYFY0bAMAyjgjEjYBiGUcGYETAMw6hgzAgYhmFUMGYEDMMwKhgzAoZhGBXM/w/IqZ/3
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[76]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -27430,7 +26025,7 @@ Name: object_present, dtype: bool</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -27443,11 +26038,10 @@ Name: object_present, dtype: bool</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df[&#39;duration&#39;] = df</span>
-<span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;battery_voltage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;battery_voltage&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;battery_voltage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;battery_voltage&#39;</span><span class="p">])</span>
 <span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;rssi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;rssi&#39;</span><span class="p">])</span>
 <span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;rssi_strength&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;rssi_strength&#39;</span><span class="p">])</span>
 <span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span>
@@ -27468,7 +26062,13 @@ Name: object_present, dtype: bool</pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/sebastian/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
+<pre>/home/sebastian/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+/home/sebastian/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -27486,19 +26086,13 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
   after removing the cwd from sys.path.
-/home/sebastian/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:5: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  &#34;&#34;&#34;
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[132]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -27529,7 +26123,7 @@ dtype: object</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs_day</span> <span class="o">=</span> <span class="n">trigs</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -27543,19 +26137,6 @@ dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[112]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f29db469b38&gt;</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -27832,7 +26413,7 @@ FSih83KjraIAAAAASUVORK5CYII=
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs_day</span><span class="p">[</span><span class="s1">&#39;weekday&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trigs_day</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">weekday</span>
@@ -27849,7 +26430,7 @@ FSih83KjraIAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[116]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -27884,9 +26465,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>thing_id</th>
       <th>thing_type_id</th>
       <th>touch</th>
+      <th>time</th>
+      <th>duration</th>
     </tr>
     <tr>
       <th>weekday</th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -27916,9 +26501,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>14</td>
       <td>14</td>
       <td>14</td>
+      <td>14</td>
+      <td>14</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>32</td>
+      <td>32</td>
       <td>32</td>
       <td>32</td>
       <td>32</td>
@@ -27946,6 +26535,8 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>20</td>
       <td>20</td>
       <td>20</td>
+      <td>20</td>
+      <td>19</td>
     </tr>
     <tr>
       <th>3</th>
@@ -27961,9 +26552,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>3</td>
       <td>3</td>
       <td>3</td>
+      <td>3</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>9</td>
+      <td>9</td>
       <td>9</td>
       <td>9</td>
       <td>9</td>
@@ -27991,9 +26586,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>6</th>
+      <td>7</td>
+      <td>7</td>
       <td>7</td>
       <td>7</td>
       <td>7</td>
@@ -28020,7 +26619,7 @@ FSih83KjraIAAAAASUVORK5CYII=
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -28036,7 +26635,7 @@ FSih83KjraIAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[107]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -28061,12 +26660,14 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th></th>
       <th>battery_voltage</th>
       <th>object_present</th>
+      <th>rssi</th>
       <th>rssi_strength</th>
       <th>temperature</th>
       <th>touch</th>
     </tr>
     <tr>
       <th>time</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -28079,6 +26680,7 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-01</th>
       <td>2.832500</td>
       <td>0.500000</td>
+      <td>-83.125000</td>
       <td>2.750000</td>
       <td>24.000000</td>
       <td>0.0</td>
@@ -28087,12 +26689,14 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-02</th>
       <td>2.836667</td>
       <td>0.333333</td>
+      <td>-85.666667</td>
       <td>2.333333</td>
       <td>26.666667</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>2017-11-03</th>
+      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -28106,11 +26710,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2017-11-05</th>
       <td>2.820000</td>
       <td>0.666667</td>
+      <td>-79.000000</td>
       <td>3.333333</td>
       <td>28.000000</td>
       <td>0.0</td>
@@ -28119,6 +26725,7 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-06</th>
       <td>2.820000</td>
       <td>0.500000</td>
+      <td>-80.625000</td>
       <td>3.125000</td>
       <td>28.000000</td>
       <td>0.0</td>
@@ -28127,12 +26734,14 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-07</th>
       <td>2.820000</td>
       <td>0.555556</td>
+      <td>-79.000000</td>
       <td>3.222222</td>
       <td>28.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>2017-11-08</th>
+      <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -28146,11 +26755,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2017-11-10</th>
       <td>2.820000</td>
       <td>0.555556</td>
+      <td>-81.777778</td>
       <td>3.000000</td>
       <td>28.000000</td>
       <td>0.0</td>
@@ -28162,11 +26773,13 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2017-11-12</th>
       <td>2.820000</td>
       <td>0.500000</td>
+      <td>-81.250000</td>
       <td>3.000000</td>
       <td>28.000000</td>
       <td>0.0</td>
@@ -28175,6 +26788,7 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-13</th>
       <td>2.820000</td>
       <td>0.500000</td>
+      <td>-78.666667</td>
       <td>3.166667</td>
       <td>28.000000</td>
       <td>0.0</td>
@@ -28183,6 +26797,7 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-14</th>
       <td>2.820000</td>
       <td>0.521739</td>
+      <td>-80.391304</td>
       <td>3.043478</td>
       <td>27.130435</td>
       <td>0.0</td>
@@ -28191,6 +26806,7 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>2017-11-15</th>
       <td>2.820000</td>
       <td>0.500000</td>
+      <td>-82.083333</td>
       <td>2.833333</td>
       <td>28.000000</td>
       <td>0.0</td>
@@ -28208,7 +26824,7 @@ FSih83KjraIAAAAASUVORK5CYII=
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;object_present&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -28224,7 +26840,7 @@ FSih83KjraIAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -28257,12 +26873,10 @@ FSih83KjraIAAAAASUVORK5CYII=
       <th>temperature</th>
       <th>thing_id</th>
       <th>thing_type_id</th>
-      <th>time</th>
       <th>touch</th>
     </tr>
     <tr>
       <th>object_present</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -28290,7 +26904,6 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>135</td>
       <td>135</td>
       <td>135</td>
-      <td>135</td>
     </tr>
     <tr>
       <th>True</th>
@@ -28305,7 +26918,6 @@ FSih83KjraIAAAAASUVORK5CYII=
       <td>865</td>
       <td>865</td>
       <td>865</td>
-      <td>865</td>
     </tr>
   </tbody>
 </table>
@@ -28320,11 +26932,10 @@ FSih83KjraIAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df.set_index(&#39;time&#39;, inplace=True)</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;object_present&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;object_present&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -28337,389 +26948,13 @@ FSih83KjraIAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f29e4d27588&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-fqQkVaUFMAAAAABJRU5ErkJggg==
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>battery_percentage</th>
-      <th>battery_voltage</th>
-      <th>device_id</th>
-      <th>event_type</th>
-      <th>last_pressed</th>
-      <th>object_present</th>
-      <th>rssi</th>
-      <th>rssi_strength</th>
-      <th>temperature</th>
-      <th>thing_id</th>
-      <th>thing_type_id</th>
-      <th>time</th>
-      <th>touch</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:07:59.607249178Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:24:53.86728333Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:41:47.767251378Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-80</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T00:58:41.757306006Z</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>100</td>
-      <td>2.82</td>
-      <td>206853764</td>
-      <td>timer</td>
-      <td>1970-01-01 00:00:00 +0000 UTC</td>
-      <td>True</td>
-      <td>-81</td>
-      <td>3</td>
-      <td>24</td>
-      <td>206853764</td>
-      <td>proximity</td>
-      <td>2017-11-01T01:15:35.487443079Z</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;present&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;object_present&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;1/8/2017&#39;</span><span class="p">:</span><span class="s1">&#39;5/4/2024&#39;</span><span class="p">][</span><span class="s2">&quot;present&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f29e4cc6668&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd2a431c1d0&gt;</pre>
 </div>
 
 </div>
@@ -28939,7 +27174,421 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>battery_percentage</th>
+      <th>battery_voltage</th>
+      <th>device_id</th>
+      <th>event_type</th>
+      <th>last_pressed</th>
+      <th>object_present</th>
+      <th>rssi</th>
+      <th>rssi_strength</th>
+      <th>temperature</th>
+      <th>thing_id</th>
+      <th>thing_type_id</th>
+      <th>touch</th>
+    </tr>
+    <tr>
+      <th>time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-11-01 00:07:59.607249178</th>
+      <td>100</td>
+      <td>2.82</td>
+      <td>206853764</td>
+      <td>timer</td>
+      <td>1970-01-01 00:00:00 +0000 UTC</td>
+      <td>True</td>
+      <td>-81</td>
+      <td>3</td>
+      <td>24</td>
+      <td>206853764</td>
+      <td>proximity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-11-01 00:24:53.867283330</th>
+      <td>100</td>
+      <td>2.82</td>
+      <td>206853764</td>
+      <td>timer</td>
+      <td>1970-01-01 00:00:00 +0000 UTC</td>
+      <td>True</td>
+      <td>-80</td>
+      <td>3</td>
+      <td>24</td>
+      <td>206853764</td>
+      <td>proximity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-11-01 00:41:47.767251378</th>
+      <td>100</td>
+      <td>2.82</td>
+      <td>206853764</td>
+      <td>timer</td>
+      <td>1970-01-01 00:00:00 +0000 UTC</td>
+      <td>True</td>
+      <td>-81</td>
+      <td>3</td>
+      <td>24</td>
+      <td>206853764</td>
+      <td>proximity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-11-01 00:58:41.757306006</th>
+      <td>100</td>
+      <td>2.82</td>
+      <td>206853764</td>
+      <td>timer</td>
+      <td>1970-01-01 00:00:00 +0000 UTC</td>
+      <td>True</td>
+      <td>-80</td>
+      <td>3</td>
+      <td>24</td>
+      <td>206853764</td>
+      <td>proximity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2017-11-01 01:15:35.487443079</th>
+      <td>100</td>
+      <td>2.82</td>
+      <td>206853764</td>
+      <td>timer</td>
+      <td>1970-01-01 00:00:00 +0000 UTC</td>
+      <td>True</td>
+      <td>-81</td>
+      <td>3</td>
+      <td>24</td>
+      <td>206853764</td>
+      <td>proximity</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df[&#39;time&#39;] = pd.to_datetime(df[&#39;time&#39;], errors=&#39;coerce&#39;).fillna(0)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;present&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;object_present&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="c1">#df.set_index(&#39;time&#39;, inplace=True)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;1/8/2017&#39;</span><span class="p">:</span><span class="s1">&#39;5/4/2024&#39;</span><span class="p">][</span><span class="s2">&quot;present&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd2a40ce438&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+AElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hour_in_day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">hour</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">time</span><span class="p">]</span>
@@ -28952,7 +27601,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;hour_in_day&#39;</span><span class="p">])[</span><span class="s1">&#39;object_present&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -28968,13 +27617,13 @@ AElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f29e16b4080&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd2a407f128&gt;</pre>
 </div>
 
 </div>
@@ -29269,7 +27918,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -29285,7 +27934,7 @@ TkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[163]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -29320,9 +27969,13 @@ TkSuQmCC
       <th>thing_id</th>
       <th>thing_type_id</th>
       <th>touch</th>
+      <th>present</th>
+      <th>hour_in_day</th>
     </tr>
     <tr>
       <th>time</th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -29352,6 +28005,8 @@ TkSuQmCC
       <td>206853764</td>
       <td>proximity</td>
       <td>False</td>
+      <td>True</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>2017-11-16 05:28:06.397721106</th>
@@ -29367,6 +28022,8 @@ TkSuQmCC
       <td>206853764</td>
       <td>proximity</td>
       <td>False</td>
+      <td>True</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>2017-11-16 05:44:52.457649336</th>
@@ -29382,6 +28039,8 @@ TkSuQmCC
       <td>206853764</td>
       <td>proximity</td>
       <td>False</td>
+      <td>True</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>2017-11-16 06:01:38.337748085</th>
@@ -29397,6 +28056,8 @@ TkSuQmCC
       <td>206853764</td>
       <td>proximity</td>
       <td>False</td>
+      <td>True</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>2017-11-16 06:18:23.927682574</th>
@@ -29412,6 +28073,8 @@ TkSuQmCC
       <td>206853764</td>
       <td>proximity</td>
       <td>False</td>
+      <td>True</td>
+      <td>6</td>
     </tr>
   </tbody>
 </table>
@@ -29426,7 +28089,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rssi_strength</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">rssi_strength</span><span class="p">)</span>
@@ -29440,7 +28103,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;rssi&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;object_present&#39;</span><span class="p">,</span> <span class="s1">&#39;battery_voltage&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;event_type&#39;</span><span class="p">])</span>
@@ -29456,7 +28119,7 @@ TkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[194]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -29521,7 +28184,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#trigs.pivot(values=&#39;duration&#39;, index=trigs.index, columns=[&#39;object_present&#39;])</span>
@@ -29538,7 +28201,7 @@ TkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[198]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -29701,7 +28364,7 @@ TkSuQmCC
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;hour_in_day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">hour</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">trigs</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">time</span><span class="p">]</span>
@@ -29734,7 +28397,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[202]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -29896,7 +28559,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigs</span><span class="p">[</span><span class="s1">&#39;weekday&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trigs</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">weekday</span>
@@ -29932,7 +28595,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[247]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">trigs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -29951,7 +28614,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[247]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -29985,7 +28648,7 @@ dtype: object</pre>
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[248]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#trigs.pivot(values=&#39;duration&#39;, index=&#39;hour_in_day&#39;, columns=&#39;object_present&#39;)</span>
@@ -30002,7 +28665,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[248]:</div>
+<div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -30113,7 +28776,7 @@ dtype: object</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[249]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;duration_minutes&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hour_in_day&#39;</span><span class="p">,</span> <span class="n">tr</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;object_present&#39;</span><span class="p">])</span>
@@ -30129,7 +28792,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[249]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -30496,7 +29159,7 @@ dtype: object</pre>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[252]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tr</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -30513,7 +29176,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[252]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
